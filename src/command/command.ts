@@ -34,13 +34,15 @@ export abstract class Command {
         this.isNestedCommand = this.isNestedCommand ?? false
         this.arguments = options.arguments
 
-        this.usage = this.arguments.map((arg) => {
+        this.usage = this.arguments ? this.arguments.map((arg) => {
             if (arg.required) {
                 return `<${arg.name}>`
             }
             return `[${arg.name}]`
         })
             .join(" ")
+            :
+            ""
         
         // Add all subcommands
         if (this.isNestedCommand) {

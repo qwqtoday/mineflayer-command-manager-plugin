@@ -47,7 +47,7 @@ export class CommandManager extends EventEmitter {
         
         if (command === undefined) {
             let message = `command ${commandLocation.join(" ")} not found. `
-            if (commandLocation.length === 1) {
+            if (commandLocation.length > 1) {
                 message += `correct usage: ${commandLocation.splice(commandLocation.length-1, 1).join(" ")} ${lastCommand.usage}`
             }
             return context.respond(message)
