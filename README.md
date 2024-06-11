@@ -25,6 +25,6 @@ class HelloCommand extends Command {
 bot.loadPlugin(commandManagerPlugin)
 
 bot.once("spawn", () => {
-    bot.commandManager.addCommand()
+    bot.commandManager.addCommand(new HelloCommand(bot))
 })
 ```
