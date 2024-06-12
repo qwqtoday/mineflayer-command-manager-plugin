@@ -15,9 +15,9 @@ class HelloCommand extends Command {
         super(bot, {
             name: "hello",
             description: "say hello",
-            isNestedCommand?: false
-            arguments?: null
-            subCommands?: null
+            isNestedCommand: false,
+            arguments: null,
+            subCommands: null
         })
     }
 }
